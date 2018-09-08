@@ -10,7 +10,7 @@ mccabe==0.6.1
 pbr==4.2.0
 pylint==1.9.2
 python-dotenv==0.9.1
-rope==0.10.7
+rope==0.11.0
 six==1.11.0
 stevedore==1.29.0
 virtualenv==16.0.0

@@ -5,8 +5,8 @@
 - Incluir testes
 - Incluir detalhamento de execução com Docker
 - Incluir passos para deploy no Heroku/Google Cloud
+- Incluir Lint/Coverage
 
-# DOING
-- Criar Infra-estrutura de projeto (Lint, Coverage, requirements.txt)
 
 # DONE
+- Criar Infra-estrutura de projeto (Arquivos iniciais, Blueprint e requirements.txt)

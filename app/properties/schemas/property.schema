@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "required": [
+       
+    ],
+    "properties" : {
+        "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1400
+        },
+        "y": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1000
+        },
+        "title": {
+            "type": "string"
+        },
+        "price": {
+            "type": "number"
+        },
+        "description": {
+            "type": "string"
+        },
+        "beds": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 4
+        },
+        "baths": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 4 
+        },
+        "squareMeters": {
+            "type": "number",
+            "minimum": 20,
+            "maximum": 240
+        } 
+    }
+}

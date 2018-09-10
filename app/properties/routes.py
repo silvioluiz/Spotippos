@@ -9,7 +9,7 @@ from .models import Property
 from .repositories import PropertyRepository as Repository
 
 @properties_bp.route('/properties', methods=['POST'])
-def createProperties():
+def create_properties():
     if (not request.is_json):
         abort(make_response(jsonify(message='Payload or mime type is not valid'), 415))
     else:
@@ -26,11 +26,15 @@ def createProperties():
             return jsonify(prop.as_dict()), 201
 
 @properties_bp.route('/properties/<id>')
-def findProperty(id):
-    pass
+def find_property(id):
+    prop = Repository.find_by_id(id);
+    if (not prop):
+        message = 'Property id {} not found'.format(id)
+        abort(make_response(jsonify(message=message), 404))
+    return jsonify(prop.as_dict()), 200;
 
 @properties_bp.route('/properties')
-def searchProperties():
+def search_properties():
     pass
 
 @properties_bp.errorhandler(400)

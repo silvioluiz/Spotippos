@@ -8,5 +8,8 @@ class PropertyRepository:
         db.session.add(property)
         db.session.commit()
 
+    def find_by_id(id):
+        return Property.query.get(id);
+
 
     

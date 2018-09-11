@@ -13,7 +13,8 @@ class PropertyRepository:
     @staticmethod
     def find_by_id(id):
         prop = Property.query.get(id);
-        prop.provinces = ProvinceRepository.find_province_by_lat_long(prop.x,prop.y)
+        if (prop):
+            prop.provinces = ProvinceRepository.find_province_by_lat_long(prop.x,prop.y)
         return prop;
 
     @staticmethod

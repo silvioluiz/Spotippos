@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "required": [
+       
+    ],
+    "properties" : {
+        "ax": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1400
+        },
+        "ay": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1000
+        },
+        "bx": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1400
+        },
+        "by": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1000
+        }
+    }
+}

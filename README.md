@@ -4,7 +4,9 @@
 
 Implementação do Desafio de Backend para o [Grupo Zap](https://github.com/grupozap/code-challenge/)
 
-# 1. Executando localmente
+# 1. Ambiente local
+
+## 1.1 Executando localmente
 
 Instalar as dependências no seu venv:
 
@@ -21,6 +23,19 @@ Inicializar a aplicação:
 O serviço estará disponível em http://localhost:5000 
 
 
+## 1.2 Testando localmente
+
+Instalar as dependências no seu venv:
+
+ ```
+ pip install -r requirements.txt 
+ ```
+
+ Executar os testes:
+
+ ```
+ pytest -v
+ ```
 
 
 # 2. API 
@@ -270,6 +285,6 @@ curl -X GET '#{BASE_URL}/properties?ax=2200&ay=3800&bx=400&by=20'
 
 # TODO
 
-- Incluir testes
+- Incluir mais testes
 - Incluir deploy
 - Incluir Lint/Coverage

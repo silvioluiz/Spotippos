@@ -7,8 +7,7 @@ def get_db():
     return db
 
 def close_db(e=None):
-    print('EM TESE session é fechada ao fechar o request')
-    
+    print('close_db')
 
 def init_db():
     db.create_all()

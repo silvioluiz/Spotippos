@@ -1,24 +1,24 @@
-#import os
+import os
 #import app
 
 class Config(object):
     DEBUG = False
     TESTING = False
-    PRODUCTION = False
-
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
+class Test(Config):
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = ''
 
 class Development(Config):
     MODE = 'Development'
     DEBUG = True
-    SECRET_KEY = 'secret_key'
-    DATABASE_URL = ''
+    project_dir = os.path.dirname(os.path.abspath(__file__))
+    database_file = "sqlite:///{}".format(os.path.join(project_dir, "properties.db"))
+    SQLALCHEMY_DATABASE_URI = database_file
 
 class Production(Config):
     MODE = 'Production'
-    DEBUG = False
     PRODUCTION = True
-    SECRET_KEY = 'secret_key' # os.environ['SECRET_KEY']
-    DATABASE_URL = ''
-
-#flask_config = os.environ.get('FLASK_CONFIG', 'Development')
-#app.config.from_object('app.config.{}'.format(flask_config))
+    SQLALCHEMY_DATABASE_URI = ''

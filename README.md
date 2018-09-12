@@ -14,22 +14,7 @@ Instalar as dependências no seu venv:
  pip install -r requirements.txt 
  ```
 
- Criar banco sqlite local:
-
- Entrar no REPL do python
- ```
- python
- ```
-Importar os módulos abaixo e executar comando de criação do banco
-
-```
-from app import db, create_app
-```
-```
-db.create_all(app=create_app())
-```
-
-O banco **properties.db (sqlite)** será criado na pasta raiz
+ FIXME: Criar banco via cli. Nesse momento banco é o arquivo properties.db 
 
 Inicializar a aplicação:
 

@@ -26,7 +26,7 @@
         "beds": {
             "type": "number",
             "minimum": 1,
-            "maximum": 4
+            "maximum": 5
         },
         "baths": {
             "type": "number",

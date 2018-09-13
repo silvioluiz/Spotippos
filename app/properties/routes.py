@@ -11,7 +11,7 @@ from .utils import load
 @properties_bp.route('/properties', methods=['POST'])
 def create_properties():
     if (not request.is_json):
-        abort(make_response(jsonify(message='Payload or mime type is not valid'), 415))
+        abort(make_response(jsonify(message='Mime type is not valid'), 415))
     else:
         errors = Validator(load('schemas/property.schema')).iter_errors(request.get_json())
         response_error = _errors(errors)
